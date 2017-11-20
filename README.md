@@ -13,3 +13,4 @@ Program will output pings to server, the "time = x ms" is what your ping should 
 TODO:
 GUI?
 Make program only output time ping
+
