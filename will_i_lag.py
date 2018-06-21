@@ -1,7 +1,7 @@
 #Ping function code derived from: https://stackoverflow.com/questions/2953462/pinging-servers-in-python
 #Python app to test ping of popular game servers.
 #CREATED BY: Justin Chudley
-#This code has been released as open soruce at: https://github.com/Chudleyj/Will-I-Lag
+#This code has been released as open source at: https://github.com/Chudleyj/Will-I-Lag
 
 from platform import system as system_name # Returns the system/OS name
 from os import system as system_call       # Execute a shell command
@@ -22,9 +22,8 @@ def ping(host):
 def get_league_server():
 
     print("Which League server are you on?")
-    valid = False
 
-    while(not valid):
+    while(True):
         print ("Enter 1 for: NA")
         print ("Enter 2 for: EUW")
         print ("Enter 3 for: EUNE")
@@ -49,14 +48,12 @@ def get_league_server():
 
         else:
             print("Error. Invalid choice. Please try again.")
-            time.sleep(1.5)
 
 def get_overwatch_server():
 
     print("Which Overwatch server are you on?")
-    valid = False
-
-    while(not valid):
+    
+    while(True):
         print ("Enter 1 for: US West")
         print ("Enter 2 for: US Central")
         print ("Enter 3 for: Brazil")
@@ -70,7 +67,6 @@ def get_overwatch_server():
 
         elif(server_choice == "2"):
             return "24.105.62.129"
-
 
         elif(server_choice == "3"):
             return "54.207.107.12"
@@ -86,14 +82,12 @@ def get_overwatch_server():
 
         else:
             print("Error. Invalid choice. Please try again.")
-            time.sleep(1.5)
 
 def get_HOS_server():
 
     print("Which Heroes of the Storm server are you on?")
-    valid = False
 
-    while(not valid):
+    while(True):
         print ("Enter 1 for: US West")
         print ("Enter 2 for: US Central")
         print ("Enter 3 for: Australia")
@@ -130,14 +124,12 @@ def get_HOS_server():
 
         else:
             print("Error. Invalid choice. Please try again.")
-            time.sleep(1.5)
 
 def get_WoW_server():
 
     print("Which World of Warcraft server are you on?")
-    valid = False
 
-    while(not valid):
+    while(True):
         print ("Enter 1 for: US")
         print ("Enter 2 for: Europe")
         print ("Enter 3 for: Korea")
@@ -151,7 +143,6 @@ def get_WoW_server():
         elif(server_choice == "2"):
             return "185.60.112.157"
 
-
         elif(server_choice == "3"):
             return "211.115.104.1"
 
@@ -163,7 +154,6 @@ def get_WoW_server():
 
         else:
             print("Error. Invalid choice. Please try again.")
-            time.sleep(1.5)
 
 print("Welcome to Will I Lag. Choose your game below: ")
 
@@ -176,7 +166,6 @@ while(not valid):
     print("Enter 3 for: Heroes of the Storm")
     print("Enter 4 for: World of Warcraft")
     choice =  raw_input()
-
 
     if(choice == "1"):
         host = get_league_server()
@@ -197,12 +186,9 @@ while(not valid):
     else:
         print("Error. Invalid choice. Please try again.")
         valid = False
-        time.sleep(1.5)
 
-time.sleep(0.5)
 print("")
 print("Pinging Server...")
-time.sleep(1.5)
 print("")
 
 i = 0
